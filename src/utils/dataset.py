@@ -63,9 +63,11 @@ def download_dataset(dataset: str, output_dir: Path) -> Path:
 
 def download_datasets(datasets: list[str], output_dir: Path):
     """Call this to download all datasets in the list."""
+    counter = 1
     for ds in datasets:
         try:
             path = download_dataset(ds, output_dir)
-            print(f"Dataset: {path}")
+            print(f"[{counter}]Dataset: {path}")
+            counter += 1
         except Exception as e:
             print(f"Failed to download {ds}: {e}")
