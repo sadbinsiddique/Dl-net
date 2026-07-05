@@ -22,3 +22,6 @@
 - ES7 React/Redux/GraphQL/React-Native snippets
 - SQLAlchemy
 - Bruno
+- Colab
+- Google Colab Keymap
+
