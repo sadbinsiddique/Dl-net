@@ -11,5 +11,8 @@
             "name": "ml",
             "path": "c:\\Users\\${env:USERPROFILE}\\.miniconda3\\envs\\ml"
         }
-    ]
+    ],
+    "[jsonc]": {
+        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    }
 }
