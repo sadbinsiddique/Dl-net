@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Dark Modern",
+    "workbench.colorTheme": "GitHub Dark",
     "files.autoSave": "afterDelay",
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "ms-python.python",
