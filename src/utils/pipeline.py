@@ -56,18 +56,14 @@ def _run_eda(num: int):
     elif num > 3 or num < 1:
         print("Invalid input. Please enter a number between 1 and 3.")
         
+def _run_pipeline():
+    """Runs the entire pipeline."""
+    _data_init()
+    for i in range(1, 4):
+        _run_eda(i)
 
 if __name__ == "__main__":
-    
-    # 1. Data Download and Extraction
-    _data_init()
-    # 2. Perform EDA on (ckplus, samm, casme2) datasets
-
-    _run_eda(1)
-    _run_eda(2)
-    _run_eda(3)
-    
-    # 3. Dataset Balancing and Splitting
+    _run_pipeline()
     
 
 
