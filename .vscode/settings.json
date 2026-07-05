@@ -1,4 +1,18 @@
 {
-    "python-envs.defaultEnvManager": "ms-python.python:venv",
-    "python-envs.defaultPackageManager": "ms-python.python:pip"
+    "C_Cpp.default.compilerPath": "C:/MinGW/bin/gcc.exe",
+    "python.defaultInterpreterPath": "c:\\Users\\{username}",
+    "workbench.colorTheme": "Dark Modern",
+    "files.autoSave": "afterDelay",
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.wordWrap": "on",
+    "python-envs.globalSearchPaths": [
+        "~/envs/ml"
+    ],
+    "python-envs.defaultEnvManager": "",
+    "python-envs.defaultPackageManager": "",
+    "python-envs.pythonProjects": [
+        
+
+    ]
 }
