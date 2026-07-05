@@ -1,18 +1,15 @@
 {
-    "C_Cpp.default.compilerPath": "C:/MinGW/bin/gcc.exe",
-    "python.defaultInterpreterPath": "c:\\Users\\{username}",
     "workbench.colorTheme": "Dark Modern",
     "files.autoSave": "afterDelay",
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.defaultFormatter": "ms-python.python",
     "editor.wordWrap": "on",
-    "python-envs.globalSearchPaths": [
-        "~/envs/ml"
-    ],
-    "python-envs.defaultEnvManager": "",
-    "python-envs.defaultPackageManager": "",
+    "python-envs.defaultEnvManager": "c:\\Users\\${env:USERPROFILE}\\.miniconda3\\envs\\ml",
+    "python-envs.defaultPackageManager": "c:\\Users\\${env:USERPROFILE}\\.miniconda3\\envs\\ml",
     "python-envs.pythonProjects": [
-        
-
+        {
+            "name": "ml",
+            "path": "c:\\Users\\${env:USERPROFILE}\\.miniconda3\\envs\\ml"
+        }
     ]
 }
