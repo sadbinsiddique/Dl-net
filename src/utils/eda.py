@@ -12,7 +12,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from PIL import Image, ImageStat
 import imagehash
-from tqdm.notebook import tqdm
+from tqdm import tqdm
 
 from sklearn.decomposition import PCA
 from sklearn.manifold import TSNE
