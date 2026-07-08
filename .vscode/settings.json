@@ -1,18 +1,6 @@
 {
-    "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
     "files.autoSave": "afterDelay",
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "ms-python.python",
-    "editor.wordWrap": "on",
-    "python-envs.defaultEnvManager": "c:\\Users\\${env:USERPROFILE}\\.miniconda3\\envs\\ml",
-    "python-envs.defaultPackageManager": "c:\\Users\\${env:USERPROFILE}\\.miniconda3\\envs\\ml",
-    "python-envs.pythonProjects": [
-        {
-            "name": "ml",
-            "path": "c:\\Users\\${env:USERPROFILE}\\.miniconda3\\envs\\ml"
-        }
-    ],
-    "[jsonc]": {
-        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
-    }
+    "python-envs.defaultEnvManager": "ms-python.python:conda",
+    "python-envs.defaultPackageManager": "ms-python.python:conda",
 }
