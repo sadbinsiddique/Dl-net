@@ -4,12 +4,12 @@
 
 Model Varient: `Convolutional Neural Network`
 
-1) AlexNet
-2) ResNet
-3) MobileNet V7
-4) EfficientNet
-5) Vision Transformer `VIT`
-6) ConvNeXt
+1) AlexNet _2k12_
+2) ResNet _2k15_
+3) MobileNet V7 
+4) EfficientNet _2k19_
+5) Vision Transformer `VIT` _2k20_
+6) ConvNeXt _2K22_
 
 Model Varient: `Graph Neural Network`
 
