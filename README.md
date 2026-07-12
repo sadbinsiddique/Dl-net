@@ -53,8 +53,8 @@ Algorithm Type: `Graph Neural Network (GNN)`
 
 ## Experiment Perform
 
-1) Local      : Mini Conda Data pre-process
-2) Cloud      : Google Colab Model train & test 
+1) Local: Mini-Conda Data pre-process
+2) Cloud: Google Colab Model train
 3) Cloud Store: Google Drive 
 4) Local Store: MySQL Database
 
