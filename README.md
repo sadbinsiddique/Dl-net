@@ -51,3 +51,10 @@ Algorithm Type: `Graph Neural Network (GNN)`
 
 > NOTE: Must be install before experiment perform
 
+## Experiment Perform
+
+1) Local      : Mini Conda Data pre-process
+2) Cloud      : Google Colab Model train & test 
+3) Cloud Store: Google Drive 
+4) Local Store: MySQL Database
+
