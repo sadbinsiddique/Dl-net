@@ -6,18 +6,25 @@ Model Varient: `Convolutional Neural Network`
 
 1) AlexNet _2k12_
 2) ResNet _2k15_
-3) MobileNet V7 
+3) MobileNet V7 _2k26_
 4) EfficientNet _2k19_
 5) Vision Transformer `VIT` _2k20_
 6) ConvNeXt _2K22_
 
 Model Varient: `Graph Neural Network`
 
-1) Spatio Spectral Graph Network 
-2) Simple Siamese Graph Network
-3) Simple Structured Graph Network
-4) Simple Spectral Graph Network
-5) Simple Efficient Graph Network as **X-GNN**                   
+1) Graph Convolutional Network _2K16_
+2) Graph Attention Network _2K17_
+3) Graph Isomorphism Network _2K18_
+4) GraphEx _2K22_
+5) Spatial & Spectral GNNs _2K22_
+6) Graph Attention _2K24_
+7) Stochastic GCN _2K24_
+8) OFVIG-Net _2K24_
+9) SpoT-GCN _2K24_
+10) FM-GCN _2K26_
+11) [**X-GCN**] < (Our Model) _2K27_
+              
 
 ## Dataset
 
