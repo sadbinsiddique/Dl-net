@@ -1,4 +1,4 @@
-# X-GCN:A Micro-Motion  Guided Lightweight Graph Neural Network for Efficient Facial Micro-Expression Recognition
+# X-GCN: A Micro-Motion  Guided Lightweight Graph Neural Network for Efficient Facial Micro-Expression Recognition
 
 ## Algorithms
 
@@ -8,7 +8,7 @@ Algorithm Type: `Convolutional Neural Network (CNN)`
 2) ResNet _2k15_
 3) MobileNet V7 _2k26_
 4) EfficientNet _2k19_
-5) Vision Transformer `VIT` _2k20_
+5) Vision Transformer (VIT) _2k20_
 6) ConvNeXt _2K22_
 
 Algorithm Type: `Graph Neural Network (GNN)`
@@ -25,12 +25,13 @@ Algorithm Type: `Graph Neural Network (GNN)`
 10) FM-GCN _2K26_
 11) **X-GCN** < _Our-Model_ _2K27_
               
-
 ## Dataset
 
 1) CASME2
 2) CK +
 3) SAMM
+
+> NOTE: Data collected from "kaggle Hub" was manually verified for authenticity.
 
 ## Extension Requirements
 
