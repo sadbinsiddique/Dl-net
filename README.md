@@ -53,8 +53,8 @@ Algorithm Type: `Graph Neural Network (GNN)`
 
 ## Experiment Perform
 
-1) **Local Train**: Mini-Conda Data pre-process
-2) **Cloud Train**: Google Colab Model train
-3) **Cloud Storage**: Google Drive 
-4) **Local Storage**: MySQL Database
+1) **Pre-Process**: In `Conda` dataset balance as `middle sample`.
+2) **Training**: In `Colab` training the model with hyper parameter
+3) **Dataset**: In `Drive` store preprocess data set. 
+4) **Model Weight**: In `MySQL` store neural network weight.
 
