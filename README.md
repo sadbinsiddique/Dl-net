@@ -1,61 +1,254 @@
-# X-GCN: A Micro-Motion  Guided Lightweight Graph Neural Network for Efficient Facial Micro-Expression Recognition
+<div align="center">
 
-## Algorithms
+# 🚀 X-GCN
+## *A Micro-Motion Guided Lightweight Graph Neural Network for Efficient Facial Micro-Expression Recognition*
 
-Algorithm Type: `Convolutional Neural Network (CNN)`
+<p>
+<img src="https://img.shields.io/badge/Status-Research-blue?style=for-the-badge">
+<img src="https://img.shields.io/badge/Language-Python-yellow?style=for-the-badge">
+<img src="https://img.shields.io/badge/Framework-PyTorch-red?style=for-the-badge">
+<img src="https://img.shields.io/badge/Platform-Google%20Colab-orange?style=for-the-badge">
+<img src="https://img.shields.io/badge/License-Academic-green?style=for-the-badge">
+</p>
 
-1) AlexNet _2k12_
-2) ResNet _2k15_
-3) MobileNet V7 _2k26_
-4) EfficientNet _2k19_
-5) Vision Transformer (VIT) _2k20_
-6) ConvNeXt _2K22_
+</div>
 
-Algorithm Type: `Graph Neural Network (GNN)`
+---
 
-1) Graph Convolutional Network _2K16_
-2) Graph Attention Network _2K17_
-3) Graph Isomorphism Network _2K18_
-4) GraphEx _2K22_
-5) Spatial & Spectral GNNs _2K22_
-6) Graph Attention _2K24_
-7) Stochastic GCN _2K24_
-8) OFVIG-Net _2K24_
-9) SpoT-GCN _2K24_
-10) FM-GCN _2K26_
-11) **X-GCN** < _Our-Model_ _2K27_
-              
-## Dataset
+# 📖 Project Overview
 
-1) CASME2
-2) CK +
-3) SAMM
+**X-GCN** is a lightweight **Graph Neural Network (GNN)** designed for **Facial Micro-Expression Recognition (MER)**. The proposed framework utilizes **micro-motion-guided graph representation learning** to efficiently capture subtle facial movements while maintaining low computational complexity.
 
-> NOTE: Data collected from `kaggle Hub` was manually verified before perform experiment for Data Authenticity.
+---
 
-## Visual Studio Code Extension
+# 🧠 Algorithms
 
-1) Python Extension Pack 
-2) Code Runner
-3) Jupyter Cell Tags
-4) Jupyter Keymap
-5) Jupyter Notebook Renderers
-6) Jupyter Slide Show
-7) python snippets
-8) Prettier 
-9) SQLTools
-10) fastapi-snippets
-11) Bruno
-12) Colab
-13) Google Colab Keymap
+## Convolutional Neural Networks (CNN)
 
-> NOTE: Must be install before experiment perform
+| Model | Release |
+|:------|:------:|
+| AlexNet | **2012** |
+| ResNet | **2015** |
+| MobileNet V7 *(Custom)* | **2026** |
+| EfficientNet | **2019** |
+| Vision Transformer (ViT) | **2020** |
+| ConvNeXt | **2022** |
 
-## Experiment Perform
+---
 
-1) On `Conda` dataset balance as `middle sample`.
-2) On `Colab` training the model with hyper parameter
-3) On `Drive` store preprocess data set. 
-4) On `MySQL` store neural network weight.
+## Graph Neural Networks (GNN)
 
-> Note: The experimental structure is subject to change as required to meet the objectives and requirements of the experiments.
+| Model | Release |
+|:------|:------:|
+| Graph Convolutional Network (GCN) | **2016** |
+| Graph Attention Network (GAT) | **2017** |
+| Graph Isomorphism Network (GIN) | **2018** |
+| GraphEx | **2022** |
+| Spatial & Spectral GNN (SSGNN) | **2022** |
+| Graph Attention-based MER | **2024** |
+| Stochastic GCN (SGCN) | **2024** |
+| OFVIG-Net | **2024** |
+| SpoT-GCN | **2024** |
+| FM-GCN | **2026** |
+| <strong>X-GCN (Proposed)</strong> | <strong>2027</strong> |
+
+---
+
+# 📂 Datasets
+
+| Dataset | Purpose |
+|----------|---------|
+| CASME II | Micro-Expression Recognition |
+| CK+ | Facial Expression Recognition |
+| SAMM | Spontaneous Micro-Expression Recognition |
+
+> **Note**
+>
+> All datasets were collected using **Kaggle Hub** and manually verified before conducting experiments to ensure **data authenticity**, **consistency**, and **integrity**.
+
+---
+
+# 💻 Development Environment
+
+### IDE
+
+- Visual Studio Code
+
+### Programming Language
+
+- Python 3.12+
+
+### Deep Learning Framework
+
+- PyTorch
+- TorchVision
+
+### Environment
+
+- Conda
+- Google Colab
+
+### Database
+
+- MySQL
+
+### Storage
+
+- Google Drive
+
+---
+
+# 🧩 Visual Studio Code Extensions
+
+| Extension |
+|-----------|
+| Python Extension Pack |
+| Code Runner |
+| Jupyter Cell Tags |
+| Jupyter Keymap |
+| Jupyter Notebook Renderers |
+| Jupyter Slide Show |
+| Python Snippets |
+| Prettier |
+| SQLTools |
+| FastAPI Snippets |
+| Bruno |
+| Colab |
+| Google Colab Keymap |
+
+> **Important**
+>
+> Install all required software packages, libraries, and dependencies before conducting the experiments.
+
+---
+
+# ⚙️ Experimental Workflow
+
+```text
+Dataset Collection
+        │
+        ▼
+ Dataset Verification
+        │
+        ▼
+ Dataset Balancing
+ (Middle Sampling)
+        │
+        ▼
+ Data Preprocessing
+        │
+        ▼
+ Store Dataset
+ (Google Drive)
+        │
+        ▼
+ Model Training
+ (Google Colab)
+        │
+        ▼
+ Hyperparameter Tuning
+        │
+        ▼
+ Save Model Weights
+ (MySQL)
+        │
+        ▼
+ Performance Evaluation
+        │
+        ▼
+ Comparison with Existing Models
+```
+
+---
+
+# 📝 Experimental Procedure
+
+| Step | Description |
+|------|-------------|
+| 01 | Collect datasets |
+| 02 | Verify dataset authenticity |
+| 03 | Balance the dataset using **Middle Sampling** |
+| 04 | Perform preprocessing |
+| 05 | Store processed datasets in **Google Drive** |
+| 06 | Train models using **Google Colab** |
+| 07 | Tune hyperparameters |
+| 08 | Save trained model weights and metadata |
+| 09 | Evaluate model performance |
+| 10 | Compare with state-of-the-art methods |
+
+---
+
+# 📊 Research Pipeline
+
+```mermaid
+flowchart LR
+
+A[Dataset]
+B[Preprocessing]
+C[Middle Sampling]
+D[CNN Models]
+E[GNN Models]
+F[X-GCN]
+G[Evaluation]
+
+A --> B
+B --> C
+C --> D
+C --> E
+D --> G
+E --> G
+G --> F
+```
+
+---
+
+# 📌 Project Structure
+
+```text
+X-GCN
+│
+├── Dataset
+│   ├── CASME II
+│   ├── CK+
+│   └── SAMM
+│
+├── Notebook
+│
+├── Models
+│   ├── CNN
+│   └── GNN
+│
+├── Preprocessing
+│
+├── Hyperparameters
+│
+├── Results
+│
+├── Figures
+│
+├── Weights
+│
+└── README.md
+```
+
+---
+
+# 📢 Important Notes
+
+> **Experiment Workflow**
+>
+> The experimental workflow may be modified whenever necessary to satisfy the research objectives.
+
+---
+
+<div align="center">
+
+## ⭐ Proposed Model
+
+# **X-GCN**
+
+*A Micro-Motion Guided Lightweight Graph Neural Network for Efficient Facial Micro-Expression Recognition*
+
+**Expected Release:** **2027**
+
+</div>
