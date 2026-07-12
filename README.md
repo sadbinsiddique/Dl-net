@@ -31,7 +31,7 @@ Algorithm Type: `Graph Neural Network (GNN)`
 2) CK +
 3) SAMM
 
-> NOTE: Data collected from "kaggle Hub" was manually verified for authenticity.
+> NOTE: Data collected from `**kaggle Hub**` was manually verified before perform experiment for Data Authenticity.
 
 ## Visual Studio Code Extension
 
