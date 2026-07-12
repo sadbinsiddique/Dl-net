@@ -58,3 +58,4 @@ Algorithm Type: `Graph Neural Network (GNN)`
 3) **Dataset**: In `Drive` store preprocess data set. 
 4) **Model Weight**: In `MySQL` store neural network weight.
 
+> NOTE: For experiment purpose `Experiment Perform` will be change if needed.
