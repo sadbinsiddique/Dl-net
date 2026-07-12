@@ -1,5 +1,19 @@
 # **MODEL `X-GNN`**
 
+## Experiment Algorithm
+
+Varient: `Convolutional Neural Network`
+
+1) AlexNet
+2) ResNet
+3) MobileNet V7
+4) EfficientNet
+5) Vision Transformer `VIT`
+6) ConvNeXt
+
+Varient: `Graph Neural Network`
+
+
 ## Extension Requirements
 
 > Must be downloaded before project run
