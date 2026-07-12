@@ -2,7 +2,7 @@
 
 ## Algorithms
 
-Model Varient: `Convolutional Neural Network`
+Algorithm Type: `Convolutional Neural Network (CNN)`
 
 1) AlexNet _2k12_
 2) ResNet _2k15_
@@ -11,7 +11,7 @@ Model Varient: `Convolutional Neural Network`
 5) Vision Transformer `VIT` _2k20_
 6) ConvNeXt _2K22_
 
-Model Varient: `Graph Neural Network`
+Algorithm Type: `Graph Neural Network (GNN)`
 
 1) Graph Convolutional Network _2K16_
 2) Graph Attention Network _2K17_
