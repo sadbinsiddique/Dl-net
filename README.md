@@ -2,7 +2,7 @@
 
 ## Experiment Algorithm
 
-Varient: `Convolutional Neural Network`
+Model Varient: `Convolutional Neural Network`
 
 1) AlexNet
 2) ResNet
@@ -11,7 +11,13 @@ Varient: `Convolutional Neural Network`
 5) Vision Transformer `VIT`
 6) ConvNeXt
 
-Varient: `Graph Neural Network`
+Model Varient: `Graph Neural Network`
+
+1) Spatio Spectral Graph Network 
+2) Simple Siamese Graph Network
+3) Simple Structured Graph Network
+4) Simple Spectral Graph Network
+5) Simple Efficient Graph Network as **X-GNN**                   
 
 
 ## Extension Requirements
