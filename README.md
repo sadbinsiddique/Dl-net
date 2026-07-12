@@ -1,4 +1,4 @@
-# **MODEL Name: _X-GNN_**
+# **MODEL `X-GNN`**
 
 ## Extension Requirements
 
