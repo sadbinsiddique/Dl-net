@@ -23,7 +23,7 @@ Model Varient: `Graph Neural Network`
 8) OFVIG-Net _2K24_
 9) SpoT-GCN _2K24_
 10) FM-GCN _2K26_
-11) [**X-GCN**] < (Our Model) _2K27_
+11) **X-GCN** < _Our-Model_ _2K27_
               
 
 ## Dataset
