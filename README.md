@@ -33,30 +33,21 @@ Algorithm Type: `Graph Neural Network (GNN)`
 
 > NOTE: Data collected from "kaggle Hub" was manually verified for authenticity.
 
-## Extension Requirements
+## Visual Studio Code Extension
 
-> Must be downloaded before project run
+1) Python Extension Pack 
+2) Code Runner
+3) Jupyter Cell Tags
+4) Jupyter Keymap
+5) Jupyter Notebook Renderers
+6) Jupyter Slide Show
+7) python snippets
+8) Prettier 
+9) SQLTools
+10) fastapi-snippets
+11) Bruno
+12) Colab
+13) Google Colab Keymap
 
-- Python Extension Pack 
-- Black Formatter
-- Code Runner
-- Jupyter Cell Tags
-- Jupyter Keymap
-- Jupyter Notebook Renderers
-- Jupyter Slide Show
-- Python Debugger
-- Python Indent
-- python snippets
-- Ruff
-- anaconda terminal
-- Prettier SQL VSCode
-- SQLTools
-- Prettier - Code formatter
-- fastapi-snippets
-- FastAPI Extension
-- ES7 React/Redux/GraphQL/React-Native snippets
-- SQLAlchemy
-- Bruno
-- Colab
-- Google Colab Keymap
+> NOTE: Must be install before experiment perform
 
