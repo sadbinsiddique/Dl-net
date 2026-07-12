@@ -58,4 +58,4 @@ Algorithm Type: `Graph Neural Network (GNN)`
 3) On `Drive` store preprocess data set. 
 4) On `MySQL` store neural network weight.
 
-> NOTE: As experiment purpose `Experiment Perform Structure` will be change if needed.
+> Note: The experimental structure is subject to change as required to meet the objectives and requirements of the experiments.
