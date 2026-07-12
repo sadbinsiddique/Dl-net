@@ -1,6 +1,6 @@
 # **MODEL `X-GNN`**
 
-## Experiment Algorithm
+## Algorithms
 
 Model Varient: `Convolutional Neural Network`
 
@@ -19,6 +19,11 @@ Model Varient: `Graph Neural Network`
 4) Simple Spectral Graph Network
 5) Simple Efficient Graph Network as **X-GNN**                   
 
+## Dataset
+
+1) CASME2
+2) CK +
+3) SAMM
 
 ## Extension Requirements
 
