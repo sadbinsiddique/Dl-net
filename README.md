@@ -11,13 +11,6 @@
     <h1>🚀 X-GCN</h1>
     <h2>A Micro-Motion Guided Lightweight Graph Neural Network for Efficient Facial Micro-Expression Recognition</h2>
 
-    <p>
-        <img src="https://img.shields.io/badge/Status-Research-blue?style=for-the-badge">
-        <img src="https://img.shields.io/badge/Language-Python-yellow?style=for-the-badge">
-        <img src="https://img.shields.io/badge/Framework-PyTorch-red?style=for-the-badge">
-        <img src="https://img.shields.io/badge/Platform-Google%20Colab-orange?style=for-the-badge">
-        <img src="https://img.shields.io/badge/License-Academic-green?style=for-the-badge">
-    </p>
 </center>
 
 <hr>
