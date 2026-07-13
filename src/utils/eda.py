@@ -1,6 +1,7 @@
 import os
 import glob
 import hashlib
+import urllib.request
 import warnings
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
@@ -20,8 +21,14 @@ from sklearn.ensemble import IsolationForest
 from skimage.metrics import structural_similarity as ssim
 import dotenv
 from pathlib import Path
+import mediapipe as mp
+from mediapipe.tasks.python.core.base_options import BaseOptions
+from mediapipe.tasks.python.vision import FaceLandmarker, FaceLandmarkerOptions, RunningMode
 
 TARGET_SIZE = (128, 128)
+DEFAULT_FACE_LANDMARKER_MODEL_URL = (
+    "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task"
+)
 
 dotenv.load_dotenv()
 
@@ -33,11 +40,7 @@ except ImportError:
     umap = None
     UMAP_AVAILABLE = False
 
-try:
-    import mediapipe as mp
-    MP_AVAILABLE = True
-except ImportError:
-    MP_AVAILABLE = False
+MP_AVAILABLE = True
 
 warnings.filterwarnings('ignore')
 
@@ -217,46 +220,77 @@ def visualize_embeddings(df, sample_size=1000):
     plt.show()
 
 
+def _resolve_face_landmarker_model():
+    model_path = os.getenv("MEDIAPIPE_FACE_LANDMARKER_MODEL")
+    if model_path:
+        resolved_path = Path(model_path).expanduser()
+        if resolved_path.exists():
+            return resolved_path
+
+    cache_dir = Path(os.getenv("XDG_CACHE_HOME") or Path.home() / ".cache") / "dl-net"
+    cache_dir.mkdir(parents=True, exist_ok=True)
+    cached_model = cache_dir / "face_landmarker.task"
+
+    if not cached_model.exists():
+        try:
+            urllib.request.urlretrieve(DEFAULT_FACE_LANDMARKER_MODEL_URL, cached_model)
+        except Exception:
+            return None
+
+    return cached_model
+
+
 def analyze_faces_mediapipe(df, sample_size=500):
     """Detects faces and extracts 468 facial landmarks."""
     if not MP_AVAILABLE:
-        print("MediaPipe base not installed. Skipping face landmarking.")
-        return
+        print("MediaPipe is not installed. Skipping landmark detection.")
+        return pd.DataFrame()
 
     try:
-        import mediapipe as mp
-        # Explicit check for the missing attribute
-        if not hasattr(mp, 'solutions'):
-            print(
-                "Warning: MediaPipe is installed, but the 'solutions' module is missing due to a corrupted installation. Skipping landmark detection.")
-            return
-
-        # Safely get the face_mesh attribute to avoid static analysis issues
-        mp_solutions = getattr(mp, 'solutions', None)
-        if mp_solutions is None:
-            print("Warning: MediaPipe 'solutions' module missing. Skipping landmark detection.")
-            return
-
-        mp_face_mesh = getattr(mp_solutions, 'face_mesh', None)
-        if mp_face_mesh is None:
-            print("MediaPipe 'face_mesh' attribute missing.")
-            return
-
-        face_mesh = mp_face_mesh.FaceMesh(static_image_mode=True, max_num_faces=1)
+        model_path = _resolve_face_landmarker_model()
+        if model_path is None:
+            print("MediaPipe face landmarker model is not available. Run scripts/download_mediapipe_face_landmarker.py or set MEDIAPIPE_FACE_LANDMARKER_MODEL.")
+            return pd.DataFrame()
 
         sampled = df.sample(min(sample_size, len(df)))
+        landmark_rows = []
         detected_count = 0
 
-        for path in tqdm(sampled['filepath'], desc="Detecting Facial Landmarks"):
-            image = cv2.imread(path)
-            if image is None: continue
-            image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        options = FaceLandmarkerOptions(
+            base_options=BaseOptions(model_asset_path=str(model_path)),
+            running_mode=RunningMode.IMAGE,
+            num_faces=1,
+            output_face_blendshapes=False,
+            output_facial_transformation_matrixes=False,
+        )
 
-            results = face_mesh.process(image_rgb)
-            if results.multi_face_landmarks:
+        with FaceLandmarker.create_from_options(options) as face_landmarker:
+            for path in tqdm(sampled['filepath'], desc="Detecting Facial Landmarks"):
+                image = cv2.imread(path)
+                if image is None:
+                    continue
+                image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+                mp_image = mp.Image(image_format=mp.ImageFormat.SRGB, data=image_rgb)
+
+                results = face_landmarker.detect(mp_image)
+                if not results.face_landmarks:
+                    continue
+
                 detected_count += 1
+                face_landmarks = results.face_landmarks[0]
+                row = {'filepath': path, 'landmarks_detected': len(face_landmarks)}
 
+                for idx, landmark in enumerate(face_landmarks):
+                    row[f'x_{idx}'] = landmark.x
+                    row[f'y_{idx}'] = landmark.y
+                    row[f'z_{idx}'] = landmark.z
+
+                landmark_rows.append(row)
+
+        landmarks_df = pd.DataFrame(landmark_rows)
         print(f"Faces detected via MediaPipe in {detected_count}/{len(sampled)} sampled images.")
+        return landmarks_df
 
     except Exception as e:
         print(f"MediaPipe initialization failed with error: {e}. Skipping landmark extraction.")
+        return pd.DataFrame()

@@ -25,7 +25,10 @@ def eda_imp(DATA_PATH: str, OUTPUT_DIR: str, NAME: str):
     plt.axis('off')
     plt.show()
 
-    analyze_faces_mediapipe(eda.df)
+    face_landmarks = analyze_faces_mediapipe(eda.df)
+    if face_landmarks is not None and not face_landmarks.empty:
+        face_landmarks.to_csv(os.path.join(OUTPUT_DIR, "face_landmarks.csv"), index=False)
+        print(f"[11]Face landmarks saved successfully.")
     visualize_embeddings(eda.df)
 
     eda.df.to_csv(os.path.join(OUTPUT_DIR, NAME), index=False)
